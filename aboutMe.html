@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app="personalSite">
 <head>
     <meta charset="UTF-8">
     <title>Joshua Sisley</title>
@@ -9,11 +9,11 @@
 
     <!--<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,600' rel='stylesheet' type='text/css'>-->
 </head>
-<body>
+<body ng-controller="aboutController">
     <nav class="navbar navbar-default navbar-custom-about">
         <div id="bs-example-navbar-collapse-1">
-            <div class="col-md-1">
-                <h4><span class="j-text">J</span><span class="o-text">o</span><span class="s-text">s</span><span class="h-text">h</span></h4>
+            <div class="col-md-1 logo">
+                <a href="/"><span class="j-text">J</span><span class="o-text">o</span><span class="s-text">s</span><span class="h-text">h</span></a>
             </div>
             <div class="col-md-6 col-lg-5 col-sm-12">
                 <input type="text" class="form-control pull-left" value="Joshua Sisley" placeholder="Search">
@@ -26,19 +26,26 @@
     </nav>
     <nav class="navbar navbar-custom-second">
         <div class="col-sm-12">
-            <ul class="nav navbar=nav col-lg-5 col-lg-offset-1 col-md-6 col-md-offset-1 col-sm-12">
-                <li><a href="index.html">Experience</a></li>
+            <ul class="nav navbar-nav col-lg-5 col-lg-offset-1 col-md-6 col-md-offset-1 col-sm-12">
+                <li><a ng-class="{activeSection: showExperience}" href ng-click="setExperience()">Experience</a></li>
+                <li><a ng-class="{activeSection: showSkills}" href ng-click="setSkills()">Skills</a></li>
+                <li><a ng-class="{activeSection: showPhilanthropy}" href ng-click="setPhilanthropy()">Philanthropy</a></li>
             </ul>
         </div>
     </nav>
-    <div class="col-lg-5 col-lg-offset-1 col-md-6 col-md-offset-1 col-sm-12">
-        Here is the first section of the page that will be where my linkedin will appear as the first result. I need to keep
-        typing so I can see if it is going to be formatted correctly.
+    <div>
+        <div ng-if="showExperience" ng-include src="'templates/experience.html'"></div>
+        <div ng-if="showSkills" ng-include src="'templates/skills.html'"></div>
+        <div ng-if="showPhilanthropy" ng-include src="'templates/philanthropy.html'"></div>
     </div>
 </body>
 
+<script src="js/jquery-1.12.0.js"></script>
+<script src="js/angular.min.js"></script>
+<script src="js/angular-route.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
-<script src="js/npm.js"></script>
+<!--<script src="js/npm.js"></script>-->
 <script src="js/script.js"></script>
+<script src="js/aboutController.js"></script>
 
 </html>

@@ -1,21 +1,25 @@
 /**
  * Created by joshuasisley on 1/18/16.
  */
-var demo_input = document.getElementById('demo_input');
+angular.module('personalSite', ['ngRoute']);
 
-var type_this = "Joshua Sisley";
-var index = 0;
+angular.module('personalSite').controller("mainController", function() {
+    var demo_input = document.getElementById('demo_input');
 
-window.next_letter = function() {
-    if (index <= type_this.length) {
-        demo_input.value = type_this.substr(0, index++);
-        setTimeout("next_letter()", 100);
-    }
-};
+    var type_this = "Joshua Sisley";
+    var index = 0;
 
-next_letter();
-setTimeout("next_page()", 2000);
+    window.next_letter = function() {
+        if (index <= type_this.length) {
+            demo_input.value = type_this.substr(0, index++);
+            setTimeout("next_letter()", 100);
+        }
+    };
 
-window.next_page = function() {
-    window.location.href = "aboutMe.html";
-};
+    next_letter();
+    setTimeout("next_page()", 2000);
+
+    window.next_page = function() {
+        window.location.href = "aboutMe.html";
+    };
+});

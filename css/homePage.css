@@ -3,10 +3,15 @@
     height: 65px;
 }
 
-.navbar-custom-about h4 {
+.navbar-custom-about a {
     font-size: 30px;
     text-align: center;
-    padding-top: 4px;
+    text-decoration: none !important;
+}
+
+.navbar-custom-about .logo {
+    padding-top: 9px;
+    padding-left: 33px;
 }
 
 .navbar-custom-about input {
@@ -28,12 +33,20 @@
     border-bottom: 1px solid #eee;
 }
 
+.navbar-custom-second .navbar-nav {
+    margin-left: 8.3333333%;
+}
+
 .navbar-custom-second a {
-    border-bottom: 3px solid #3369E8;
     padding-bottom: 17px !important;
     padding-top: 8px !important;
     width: 100px;
     color: #3369E8;
+    text-align: center;
+}
+
+.activeSection {
+    border-bottom: 3px solid #3369E8;
 }
 
 .google-type-header h1 {
@@ -71,5 +84,36 @@
 
 .h-text {
     color: #009925;
+}
+
+.experience-section h4 a {
+    color: #1a0dab
+}
+
+.experience-section h5 {
+    margin-top: -6px;
+    color: #009925;
+}
+
+.top-line {
+    margin-top: -6px;
+    color: #888;
+}
+
+.non-link {
+    margin-top: 22px;
+    color: #1a0dab;
+}
+
+.my-info {
+    margin-top: 22px;
+    padding: 20px;
+    border: 1px solid #eee;
+    border-radius: 2px;
+}
+
+.my-info .btn-default {
+    border-radius: 2px;
+    margin-top: 28px;
 }
 
