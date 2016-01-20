@@ -126,3 +126,10 @@
     margin-top: 0px;
 }
 
+.email-form {
+    border: 1px solid #eee;
+    padding: 20px;
+    margin-top: 10px;
+    border-radius: 2px;
+}
+

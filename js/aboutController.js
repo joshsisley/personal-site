@@ -5,6 +5,7 @@ angular.module('personalSite').controller("aboutController", function($scope) {
     $scope.showExperience = true;
     $scope.showSkills = false;
     $scope.showPhilanthropy = false;
+    $scope.emailMe = false;
 
 
     $scope.setExperience = function() {
