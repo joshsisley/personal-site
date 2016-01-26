@@ -19,7 +19,6 @@
                 <input type="text" class="form-control pull-left" value="Joshua Sisley" placeholder="Search">
             </div>
             <ul class="nav navbar-nav pull-right navbar-list">
-                <li class="name-list">Josh</li>
                 <li><a target="_blank" href="https://www.linkedin.com/in/joshua-sisley-12995154">LinkedIn</a></li>
             </ul>
         </div>
@@ -29,6 +28,7 @@
             <ul class="nav navbar-nav col-lg-5 col-lg-offset-1 col-md-6 col-md-offset-1 col-sm-12">
                 <li><a ng-class="{activeSection: showExperience}" href ng-click="setExperience()">Experience</a></li>
                 <li><a ng-class="{activeSection: showSkills}" href ng-click="setSkills()">Skills</a></li>
+                <!--<li><a ng-class="{activeSection: showProjects}" href ng-click="setProjects()">Projects</a></li>-->
                 <li><a ng-class="{activeSection: showPhilanthropy}" href ng-click="setPhilanthropy()">Philanthropy</a></li>
             </ul>
         </div>
@@ -36,6 +36,7 @@
     <div>
         <div ng-if="showExperience" ng-include src="'templates/experience.html'"></div>
         <div ng-if="showSkills" ng-include src="'templates/skills.html'"></div>
+        <!--<div ng-if="showProjects" ng-include src="'templates/projects.html'"></div>-->
         <div ng-if="showPhilanthropy" ng-include src="'templates/philanthropy.html'"></div>
     </div>
 </body>

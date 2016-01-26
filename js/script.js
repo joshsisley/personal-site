@@ -4,6 +4,8 @@
 angular.module('personalSite', ['ngRoute']);
 
 angular.module('personalSite').controller("mainController", function() {
+
+    // Configure the auto typing in the search box
     var demo_input = document.getElementById('demo_input');
 
     var type_this = "Joshua Sisley";

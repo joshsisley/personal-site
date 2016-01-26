@@ -114,7 +114,11 @@
 
 .my-info .btn-default {
     border-radius: 2px;
-    margin-top: 28px;
+    margin-top: 22px;
+}
+
+.my-info h5 {
+    margin: 3px 0px;
 }
 
 .newSkill {
@@ -134,13 +138,19 @@
 }
 
 .navbar-list a {
-    font-size: 19px;
-    margin-top: 4px;
+    font-size: 18px;
+    margin-top: 9px;
+    margin-right: 17px;
+    color: #3369E8 !important;
 }
 
 .name-list {
     font-size: 18px;
     margin-top: 17px;
     margin-right: 17px;
+}
+
+.prof-image {
+    height: 137px;
 }
 
